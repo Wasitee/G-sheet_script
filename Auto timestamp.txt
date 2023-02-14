@@ -1,0 +1,340 @@
+////* ทำ Timestamp หลายๆชีท
+
+function onEdit(e) {
+// CHECK IN
+
+  var startRowIn = 8;
+  var targetColumnIn = 2;
+  var showColunmIn = 9;
+
+// CHECK OUT
+
+  var startRowOut = 8;
+  var targetColumnOut = 11;
+  var showColunmnOut = 10;
+
+// CHECK OUT
+
+  var startRowLH = 6;
+  var targetColumnLH = 12;
+  var showColunmnLH = 13;
+
+// Assign LH GBKK
+
+  var startRowGBKK = 5;
+  var targetColumnGBKK = 21;
+  var showColumnGBKK = 22;
+
+// Assign LH 12AM
+
+  var startRowSO = 6;
+  var targetColumnSO = 14;
+  var showColumnSO = 15;
+
+// Sheet List
+
+  var wsC1 = "ฟอร์มตรวจสอบ (09.00น.)";
+  var wsC2 = "ฟอร์มตรวจสอบ (11.00น.)";
+  var wsC3 = "ฟอร์มตรวจสอบ (14.00น.)";
+  var wsC4 = "ฟอร์มตรวจสอบ (16.00น.)";
+  var wsC5 = "ฟอร์มตรวจสอบ (20.00น.)";
+  var wsC6 = "ฟอร์มตรวจสอบ (23.00น.)";
+  var wsC7 = "ฟอร์มตรวจสอบ (01.00น.)";
+  var wsC8 = "ฟอร์มตรวจสอบ (03.00น.)";
+  var wsC9 = "ฟอร์มตรวจสอบ (>04.00น.)";
+
+// In Solving
+
+  var startRowSIn = 3;
+  var targetColumnSIn = 9;
+  var showColunmnSIn = 4;
+
+// Out Solving
+
+  var startRowSOut = 3;
+  var targetColumnSOut = 5;
+  var showColunmnSOut = 4;
+
+// Sheet List
+
+  var wsS1 = "รับเข้า (กะเช้า)";
+  var wsS2 = "ส่งออก (กะเช้า)";
+  var wsS3 = "รับเข้า (กะดึก)";
+  var wsS4 = "ส่งออก (กะดึก)";
+
+// Sheet add
+
+  var wsASLH = "SOC_Packed ที่ต้อง Assign LH";
+  var wsASGBKK = "SOC_Packed (GBKK)";
+  var wsAS12AM = "SOC_Packed (UPC) 12AM"
+
+// Condition
+
+  var row = e.range.getRow();
+  var col = e.range.getColumn();
+
+
+// 1 Check (09.00)
+
+  // 1.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC1){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 1.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC1){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+    
+  }
+
+// 2 Check (11.00)
+
+  // 2.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC2){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 2.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC2){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 3 Check (14.00)
+
+  // 3.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC3){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 3.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC3){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 4 Check (16.00)
+
+  // 4.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC4){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 4.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC4){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 5 Check (19.00)
+
+  // 5.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC5){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 5.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC5){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 6 Check (21.00)
+
+  // 6.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC6){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 6.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC6){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 7 Check (00.00)
+
+  // 7.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC7){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 7.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC7){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 8 Check (02.00)
+
+  // 8.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC8){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 8.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC8){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+// 9 Check (>03.00)
+
+  // 9.1 Time in Ticket Checking
+  
+  if(col === targetColumnIn && row > startRowIn && e.source.getActiveSheet().getName() === wsC9){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmIn).setValue(stamp);
+    
+  }
+
+  // 9.2 Time out Ticket Checking
+  
+  if(col === targetColumnOut && row > startRowOut && e.source.getActiveSheet().getName() === wsC9){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnOut).setValue(stamp);
+
+  }
+
+  // 1 Solving DIn
+  
+  if(col === targetColumnSIn && row > startRowSIn && e.source.getActiveSheet().getName() === wsS1){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnSIn).setValue(stamp);
+
+  }
+
+  // 2 Solving DOut
+  
+  if(col === targetColumnSOut && row > startRowSOut && e.source.getActiveSheet().getName() === wsS2){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnSOut).setValue(stamp);
+
+  }
+
+  // 3 Solving NIn
+  
+  if(col === targetColumnSIn && row > startRowSIn && e.source.getActiveSheet().getName() === wsS3){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnSIn).setValue(stamp);
+
+  }
+
+  // 4 Solving NOut
+  
+  if(col === targetColumnSOut && row > startRowSOut && e.source.getActiveSheet().getName() === wsS4){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnSOut).setValue(stamp);
+
+  }
+
+  // Line haul thing
+  
+  if(col === targetColumnLH && row > startRowLH && e.source.getActiveSheet().getName() === wsASLH){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColunmnLH).setValue(stamp);
+
+    // UPC NO/NE
+  } 
+
+   if(col === targetColumnGBKK && row > startRowGBKK && e.source.getActiveSheet().getName() === wsASGBKK){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColumnGBKK).setValue(stamp);
+  }
+
+  if(col === targetColumnSO && row > startRowSO && e.source.getActiveSheet().getName() === wsAS12AM){
+    
+    var stamp = new Date();
+    
+    e.source.getActiveSheet().getRange(row,showColumnSO).setValue(stamp);
+  }
+  
+}
