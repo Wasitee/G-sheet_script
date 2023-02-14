@@ -1,0 +1,17 @@
+function makecopyto() {
+  	const folderId = Folder link;
+  	const ss = SpreadsheetApp.getActiveSpreadsheet();
+  	var thisDate = Utilities.formatDate(new Date(), "GMT+7", "yyyy-MM-dd");
+  	var newSpreadsheet = DriveApp.getFileById(ss.getId()).makeCopy(DriveApp.getFolderById(folderId));
+  	newSpreadsheet.setName("["+ thisDate +"] SPX Stuck order - Shipment Info");
+
+  	var newSs = SpreadsheetApp.openById(newSpreadsheet.getId());
+  	var sheets = newSs.getSheets();
+ 	var range = newSs.getSheetByName("Main List").getDataRange();
+  	range.copyTo(range, {contentsOnly: true});
+  	for (var i = 0; i < sheets.length; i++) {
+    	if (sheets[i].getSheetName() != "Sheet1") {
+      	newSs.deleteSheet(sheets[i]);
+    	}
+  }
+
