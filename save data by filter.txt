@@ -1,0 +1,23 @@
+function moveRows() {
+  const ss = SpreadsheetApp.openById('link').getSheetByName('sheetname'); 
+  const database = SpreadsheetApp.openById('link').getSheetByName('sheetname'); 
+  const databaseLastRow = database.getRange("F:F").getValues().filter(String).length;
+
+  let lastRow = ss.getLastRow(); 
+
+  let sortRange = ss.getSheetValues(2,1,lastRow, 7); 
+// (row/column/last row/column save)
+  Logger.log(lastRow)
+
+  let databaseCounter = 1; 
+
+  for (var i = 1; i <= sortRange.length; i++) {
+    let name = ss.getRange(i,10).getValue(); 
+
+      if (name == "1") {
+        let rowValues = ss.getRange(i, 1, 1, 7).getValues();
+        database.getRange(databaseLastRow+databaseCounter, 6, 1, 7).setValues(rowValues); 
+        databaseCounter++; 
+      }
+  }; 
+}; 
