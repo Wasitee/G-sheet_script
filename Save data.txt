@@ -1,0 +1,50 @@
+function Save()
+{
+  var ui = SpreadsheetApp.getUi(); 
+   
+  var activeSheet = SpreadsheetApp.getActiveSpreadsheet();
+  var ReceiveSheet = activeSheet.getSheetByName("4PL Main")
+  var ReceiveSheet1 = activeSheet.getSheetByName("4PL Main")
+  var Lumos = activeSheet.getSheetByName("Report 1379")
+
+  var databaseID1 = "1ZyNNmTxiwZYJagoRxpvu5rtBBTn0pfXvh39pUJQ4pBQ"
+  var databaseSheet = SpreadsheetApp.open(DriveApp.getFileById(databaseID1))
+  var DatabaseSheet = databaseSheet.getSheetByName("All couriers")
+  var DatabaseSheet2 = databaseSheet.getSheetByName("4PL Email")
+    
+  var Avals = ReceiveSheet.getRange("D:D").getValues(); 
+  var Avals2 = ReceiveSheet1.getRange("K:K").getValues(); 
+  var Avals3 = Lumos.getRange("A:A").getValues();                                                         
+  var Alast = Avals.filter(String).length +4;   
+  var Alast2 = Avals2.filter(String).length +3;
+  var Alast3 = Avals3.filter(String).length +1;                                                            
+
+
+  if (Alast != 6){
+    var result = ui.alert('คุณต้องการนำข้อมูลจำนวน ' + (Alast-6).toString() + ' แถวเก็บลงฐานข้อมูลใช่หรือไม่',ui.ButtonSet.YES_NO);   
+  if (result == ui.Button.YES) {
+    var range1 = ReceiveSheet.getRange("C6:I" + Alast);                                                               
+    var data1 = range1.getValues();
+    var DLast1 = DatabaseSheet.getRange("D:D").getValues().filter(String).length;
+    var tarRange1 = DatabaseSheet.getRange("B" + (DLast1+1) + ":H" + (DLast1 + data1.length));
+    tarRange1.setValues(data1);
+
+  if (Alast2 != 5){
+    var result = ui.alert('คุณต้องการนำข้อมูลจำนวน ' + (Alast2-5).toString() + ' แถวเก็บลงฐานข้อมูลใช่หรือไม่',ui.ButtonSet.YES_NO);   
+  if (result == ui.Button.YES) {
+    var range2 = ReceiveSheet1.getRange("K6:N" + Alast2);   
+    var data2 = range2.getValues();  
+    var DLast2 = DatabaseSheet2.getRange("A:A").getValues().filter(String).length;
+    var tarRange2 = DatabaseSheet2.getRange("A" + (DLast2+1) + ":D" + (DLast2 + data2.length));
+    tarRange2.setValues(data2);
+
+    ui.alert('ข้อมูลได้ถูกเก็บบันทึกลงฐานข้อมูล');
+
+   ///Clear Content
+
+    ReceiveSheet.getRange("K6:M" + Alast2).clearContent();
+    ReceiveSheet.getRange("D6:D" + Alast2).clearContent();
+    Lumos.getRange("A2:C" + Alast3).clearContent();
+
+
+  }}}}}
