@@ -1,0 +1,14 @@
+function copyto()
+{
+  var source = SpreadsheetApp.getActiveSpreadsheet();
+  var source_sheet = source.getSheetByName('sheetname')
+  var Range = source_sheet.getDataRange();
+  var A1Range = Range.getA1Notation();
+  var SData = Range.getValues();
+
+  var destination = SpreadsheetApp.openById("link");
+  var new_sheet =  source_sheet.copyTo(destination)
+  Utilities.formatDate(new Date(source_sheet.getRange(1,1).getValue()),Session.getScriptTimeZone(), "dd MMM yy" ))
+  new_sheet.getRange(A1Range).setValues(SData);
+
+}
