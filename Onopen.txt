@@ -1,0 +1,18 @@
+function onOpen() {
+  createMenuWithSubMenu();
+}
+
+function createMenuWithSubMenu() {
+  var subMenu = SpreadsheetApp.getUi().createMenu("Name")
+    .addItem("Setting D", "settingD")
+    .addItem("Setting E", "settingE");
+  
+  SpreadsheetApp.getUi().createMenu("⚙️ Script")
+    .addItem("Setting A", "settingA")
+    .addItem("Setting B", "settingB")
+    .addItem("Setting C", "settingC")
+    .addSeparator()
+    .addSubMenu(subMenu)
+    .addToUi();
+}
+
