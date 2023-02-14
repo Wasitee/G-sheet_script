@@ -1,0 +1,139 @@
+function REWClear(){
+   
+  var activeSheet = SpreadsheetApp.getActiveSpreadsheet();
+  var ReceiveSheet = activeSheet.getSheetByName("REW")
+  var ReceiveSheet1 = activeSheet.getSheetByName("2")    
+
+  var month = ReceiveSheet.getRange(1,1).getValues();  
+  var get_num=parseInt(month);
+
+  switch (get_num)  {
+
+    case 1:
+    var databaseIDOB = "1Vq_ciC4knNGyeNl09fy32jjQvjZJ9c9LgClI89C4IIc"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "1rmEMeX7XI8gNU_0SlD_NPS-zD0Ng0mdS1SjSb2IjoVk"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1soqMw4yk3f8hHxmP1bpL8tIQBGWKO-hKTtJhuT3ZaHo"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "1tQlUtPbIPHdz112ozkUr768W5HPbXFX6Uvp5fb41ARA"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+
+    case 2:
+    var databaseIDOB = "1fzdj9RtHADKfcqpC4XQrwRRYnj6wU_b0GtGaMXSaMD4"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "10NRAHtZfdPTr-PdrXoSLUvzqKx5z7jVQqkjHcDO9cPQ"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1Vq_ciC4knNGyeNl09fy32jjQvjZJ9c9LgClI89C4IIc"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "1rmEMeX7XI8gNU_0SlD_NPS-zD0Ng0mdS1SjSb2IjoVk"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+
+    case 3:
+    var databaseIDOB = "1lrYdnzWUhrRXH8h2XkZMmsWSo15tJhHl2WvuD8Oxnzg"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "1yT-zQG1LPVD037IgD6J17qeC2pniQqZ25Ew96vvqJzY"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1fzdj9RtHADKfcqpC4XQrwRRYnj6wU_b0GtGaMXSaMD4"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "10NRAHtZfdPTr-PdrXoSLUvzqKx5z7jVQqkjHcDO9cPQ"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+
+    case 4:
+    var databaseIDOB = "1oTd56MpIypzrV5SgWJhe77dv9JDDvUYmuvrTtRwQZ8w"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "1G8B6b_UdipQi9bMuUc4bZgi0kO8l20OTSQuB0xGrmCs"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1lrYdnzWUhrRXH8h2XkZMmsWSo15tJhHl2WvuD8Oxnzg"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "1yT-zQG1LPVD037IgD6J17qeC2pniQqZ25Ew96vvqJzY"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+
+    case 5:
+    var databaseIDOB = "1oTd56MpIypzrV5SgWJhe77dv9JDDvUYmuvrTtRwQZ8w"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "12tZ6kcnWkt8BrOoofZ7fdnyEQ7wiQ5YaMcHEUVO-LA0"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1oTd56MpIypzrV5SgWJhe77dv9JDDvUYmuvrTtRwQZ8w"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "1G8B6b_UdipQi9bMuUc4bZgi0kO8l20OTSQuB0xGrmCs"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+
+    case 12:
+    var databaseIDOB = "1soqMw4yk3f8hHxmP1bpL8tIQBGWKO-hKTtJhuT3ZaHo"
+    var databaseSheetOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDOB))
+    var DatabaseSheetOB = databaseSheetOB.getSheetByName('Search')
+    var databaseIDIB = "1tQlUtPbIPHdz112ozkUr768W5HPbXFX6Uvp5fb41ARA"
+    var databaseSheetIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDIB))
+    var DatabaseSheetIB = databaseSheetIB.getSheetByName('Search')
+
+    var databaseIDoldOB = "1_Zl7LAtO5mHRtRnJTecU2-RJ1lTWsTfZGr0YY_AHov8"
+    var databaseSheetoldOB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldOB))
+    var DatabaseSheetoldOB = databaseSheetoldOB.getSheetByName('Search')
+    var databaseIDoldIB = "1H4BbCc2e_Ox3SUyKMm51wR9ePFxfzJK7Li7aSm1n1ME"
+    var databaseSheetoldIB = SpreadsheetApp.open(DriveApp.getFileById(databaseIDoldIB))
+    var DatabaseSheetoldIB = databaseSheetoldIB.getSheetByName('Search')
+    break;
+  }    
+// 
+  var databaseIDdmg = "1eMVuspMFu2gznvsJ5AehmnxoOle2kD7I6i3hXDL4V4Y"
+  var databaseSheetdmg = SpreadsheetApp.open(DriveApp.getFileById(databaseIDdmg))
+  var DatabaseSheetdmg = databaseSheetdmg.getSheetByName('Search')
+  
+  var databaseIDdmgn = "1S4SCwjAeaf1O7R7Rkv5z66_bhey57Hc-9mpd6POVlIU"
+  var databaseSheetdmgn = SpreadsheetApp.open(DriveApp.getFileById(databaseIDdmgn))
+  var DatabaseSheetdmgn = databaseSheetdmgn.getSheetByName('Search')
+
+  var databaseIDlost = "1oY0T6wM0GAMBN4dTZAMXEDByCiNfzSVfaDn7WGu9nuo"
+  var databaseSheetlost = SpreadsheetApp.open(DriveApp.getFileById(databaseIDlost))
+  var DatabaseSheetlost = databaseSheetlost.getSheetByName('Search')
+  
+  var databaseIDrtn = "1Z62aDbNNREqmj9I1rlK9HxJy0oDGQz8pKZs69aphHEg"
+  var databaseSheetrtn = SpreadsheetApp.open(DriveApp.getFileById(databaseIDrtn))
+  var DatabaseSheetrtn = databaseSheetrtn.getSheetByName('Search')
+
+
+  var Avals = ReceiveSheet1.getRange("A:A").getValues();       
+  var Alast = Avals.filter(String).length+1; 
+  var Alast1 = Avals.filter(String).length+2;                
+
+  DatabaseSheetOB.getRange("A2:A" + Alast).clearContent();
+  DatabaseSheetoldOB.getRange("A2:A" + Alast).clearContent();
+  DatabaseSheetIB.getRange("A2:A" + Alast).clearContent();
+  DatabaseSheetoldIB.getRange("A2:A" + Alast).clearContent();
+  DatabaseSheetdmgn.getRange("A2:A" + Alast1).clearContent();
+  DatabaseSheetdmg.getRange("B3:B" + Alast1).clearContent();
+  DatabaseSheetlost.getRange("B3:B" + Alast1).clearContent();
+  DatabaseSheetrtn.getRange("B3:B" + Alast1).clearContent();
+  
+}
